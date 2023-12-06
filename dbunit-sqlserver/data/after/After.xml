@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+  <!--
+    日付は検証対象外だが一応記載します。
+    フィルターできていることを検証するために、わざと違う日付を入力しておきます。
+  -->
+  <user
+      ID="1"
+      NAME="abc"
+      AGE="22"
+      SALARY="200000"
+      JOB_TYPE="employee"
+      HIREDATE="2017-12-31 24:12:36"
+      DEPARTMENT_ID="1"
+  />
+</dataset>
