@@ -117,4 +117,45 @@ dbunit 2.4 以降では、カスタムFailureHandlerを登録できるように�
   <tr><td>DatabaseOperation</td><td>各テストの前後にデータベースで実行される操作を表す抽象クラス。</td></tr>
 </table>
 
+# QA
 
+
+Q1. SQLServerでIDENTITYなど自動で連番のあるテーブルにINSERTするには？  
+A1. テストデータでIDENTITYのついているテーブルを設定しない。  
+    もしくは、以下のように自動連番の付与されている列を除外する。
+
+	ITable filteredTable = DefaultColumnFilter.excludedColumnsTable(testData.getTable("test_table"), new String[] {"ID"}); 
+	DefaultDataSet result = new DefaultDataSet(filteredTable);
+	
+Q2. 日付データの形式
+A2. 以下の形式  
+
+- DATE 型なら yyyy-[m]m-[d]d
+- TIME 型なら hh:mm:ss
+- TIMESTAMP 型なら yyyy-[m]m-[d]d hh:mm:ss[.f...]
+- 以下の特殊な予約文字  
+   [now] :現在時刻  
+   [now{DIFF}{TIME}] :現在時刻からの相対日時
+
+[DbUnit使い方メモ 日付型](https://qiita.com/opengl-8080/items/c92b6b687c9b5e277995#%E6%97%A5%E4%BB%98%E5%9E%8B)
+
+Q3. BLOB 型の形式
+A3. 以下の形式 
+
+- [TEXT]value  
+ value で指定した値を文字列として扱い、バイナリにエンコードした値を読み込む  
+ [TEXT UTF-8]のようにして、エンコードするときの文字コードを指定できる  
+ 未指定の場合は、デフォルトで UTF-8 でエンコードされる  
+
+- [BASE64]value  
+ value で指定した値を、 Base64 でエンコードされた文字列として読み込む  
+
+- [FILE]value  
+ value で指定した値をファイルのパスとして扱い、ファイルの内容を読み込む  
+  
+- [URL]value  
+ value で指定した値を URL として扱い、 URL から読み取った内容をバイナリとして読み込む  
+ http://～ のような URL を指定すれば、インターネット経由でファイルを読み込むようなことも可能  
+
+
+[DbUnit使い方メモ BLOB型](https://qiita.com/opengl-8080/items/c92b6b687c9b5e277995#blob-%E5%9E%8B)

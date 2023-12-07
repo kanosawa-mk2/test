@@ -20,31 +20,9 @@
 			<groupId>org.dbunit</groupId>
 			<artifactId>dbunit</artifactId>
 			<version>2.7.3</version>
+			<scope>test</scope>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/org.assertj/assertj-db -->
-		<!--		<dependency>-->
-		<!--			<groupId>org.assertj</groupId>-->
-		<!--			<artifactId>assertj-db</artifactId>-->
-		<!--			<version>1.2.0</version>-->
-		<!--		</dependency>-->
-
-		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-		<!--		<dependency>-->
-		<!--			<groupId>commons-io</groupId>-->
-		<!--			<artifactId>commons-io</artifactId>-->
-		<!--			<version>2.6</version>-->
-		<!--		</dependency>-->
-		<!--		<dependency>-->
-		<!--			<groupId>org.slf4j</groupId>-->
-		<!--			<artifactId>slf4j-api</artifactId>-->
-		<!--			<version>1.7.25</version>-->
-		<!--		</dependency>-->
-		<!--		<dependency>-->
-		<!--			<groupId>org.slf4j</groupId>-->
-		<!--			<artifactId>slf4j-log4j12</artifactId>-->
-		<!--			<version>1.7.25</version>-->
-		<!--		</dependency>-->
 
 		<dependency>
 			<groupId>org.slf4j</groupId>
@@ -57,24 +35,19 @@
 			<version>2.22.0</version>
 		</dependency>
 
-<!--		<dependency>-->
-<!--			<groupId>org.slf4j</groupId>-->
-<!--			<artifactId>log4j-over-slf4j</artifactId>-->
-<!--			<version>2.0.9</version>-->
-<!--		</dependency>-->
-
 
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.13</version>
-			<!--			<scope>test</scope>-->
+			<scope>test</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>com.microsoft.sqlserver</groupId>
 			<artifactId>mssql-jdbc</artifactId>
 			<version>12.4.2.jre11</version>
+			
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi -->
@@ -82,12 +55,14 @@
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi</artifactId>
 			<version>5.2.5</version>
+			<scope>test</scope>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
 			<version>5.2.5</version>
+			<scope>test</scope>
 		</dependency>
 
 

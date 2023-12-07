@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration>
+<Configuration status="OFF">
+	<Properties>
+<!-- 		<Property name="ptn">%d{yyyy-MM-dd HH:mm:ss.SSS} p=%-5p c=%c t=%t C=%C F=%F M=%M L=%L m=%m %n</Property> -->
+		<Property name="ptn">%d{yyyy-MM-dd HH:mm:ss.SSS} [%-5p] %m %n</Property>
+
+	</Properties>
+	<Appenders>
+		<!-- コンソール出力 -->
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout pattern="${ptn}" />
+		</Console>
+		<!-- ファイル出力 -->
+<!-- 		<File name="file" fileName="log/${date:yyyyMMddHHmmss}.log"> -->
+<!-- 			<PatternLayout pattern="${ptn}" /> -->
+<!-- 		</File> -->
+	</Appenders>
+	<Loggers>
+		<Root level="DEBUG">
+			<AppenderRef ref="console" />
+<!-- 			<AppenderRef ref="file" /> -->
+		</Root>
+	</Loggers>
+</Configuration>
