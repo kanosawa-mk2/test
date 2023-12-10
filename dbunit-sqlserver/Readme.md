@@ -127,7 +127,7 @@ A1. テストデータでIDENTITYのついているテーブルを設定しな�
 	ITable filteredTable = DefaultColumnFilter.excludedColumnsTable(testData.getTable("test_table"), new String[] {"ID"}); 
 	DefaultDataSet result = new DefaultDataSet(filteredTable);
 	
-Q2. 日付データの形式
+Q2. 日付データの形式  
 A2. 以下の形式  
 
 - DATE 型なら yyyy-[m]m-[d]d
@@ -139,7 +139,7 @@ A2. 以下の形式
 
 [DbUnit使い方メモ 日付型](https://qiita.com/opengl-8080/items/c92b6b687c9b5e277995#%E6%97%A5%E4%BB%98%E5%9E%8B)
 
-Q3. BLOB 型の形式
+Q3. BLOB 型の形式  
 A3. 以下の形式 
 
 - [TEXT]value  
