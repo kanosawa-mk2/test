@@ -15,7 +15,7 @@ JUnit 5 = JUnit Platform + JUnit Jupiter + JUnit Vintage
 
 # URL
 
-* [JUnit 5 ユーザーガイド](https://oohira.github.io/junit5-doc-jp/user-guide/#dependency-metadata)
+* [JUnit 5 ユーザーガイド](https://oohira.github.io/junit5-doc-jp/user-guide/)
 * [JUnit 5 サンプル](https://github.com/junit-team/junit5-samples/tree/main)
 
 # 環境構築

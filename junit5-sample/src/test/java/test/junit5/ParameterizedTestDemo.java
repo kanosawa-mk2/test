@@ -14,7 +14,6 @@ import org.junit.jupiter.params.provider.ValueSource;
 public class ParameterizedTestDemo {
 	@ParameterizedTest
 	@ValueSource(strings = { "racecar", "radar", "able was I ere I saw elba" })
-	
 	void palindromes(String candidate) {
 	    assertTrue(isPalindrome(candidate));
 	}
